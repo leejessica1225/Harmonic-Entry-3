@@ -1,33 +1,107 @@
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
+}
+* {
+  box-sizing: border-box;
 }
 
-#toggles-section {
-  padding: 50px;
-  background-color: #f0f0f0;
-}
 
-.main-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+  .main-container {
+    max-width: 1512px;
+    height: 982px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #f1348a;
+    overflow: hidden;
+  }
 
-.toggle-component {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
+  .toggle-component {
+    position: absolute;
+    width: 280px;
+    height: 112px;
+  }
 
-.toggle-element {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
+  .toggle-1 { top: 702px; left: 1028px; }
+  .toggle-2 { top: 551px; left: 518px; }
+  .toggle-3 { top: 352px; left: 833px; }
+  .toggle-4 { top: 163px; left: 459px; }
+  .toggle-5 { top: 763px; left: 205px; }
+  .toggle-6 { top: 395px; left: 121px; }
+  .toggle-7 { top: 120px; left: 1064px; }
 
-.toggle-circle { z-index: 3; }
-.toggle-on-text { z-index: 2; }
-.toggle-off-text { z-index: 1; }
+  .toggle-switch-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f1348a;
+    border: 3px solid #f0e4ce;
+    border-radius: 272px;
+  }
+
+  .toggle-element {
+    position: absolute;
+  }
+
+  .toggle-circle {
+    top: 7px;
+    left: 7px;
+    width: 98px;
+    height: 98px;
+  }
+
+  .toggle-on-text {
+    top: 42.6px;
+    left: 29.6px;
+    width: 49.53px;
+    height: 26.56px;
+  }
+
+  .toggle-off-text {
+    top: 32.9px;
+    left: 197.6px;
+    width: 53.69px;
+    height: 36.25px;
+  }
+
+  @media (max-width: 1512px) {
+    .main-container {
+      width: 100vw;
+      height: calc(100vw * 982 / 1512);
+    }
+    .toggle-component {
+      width: 18.52%; /* 280 / 1512 */
+      height: 11.4%; /* 112 / 982 */
+    }
+    .toggle-1 { top: 71.48%; left: 68.0%; }
+    .toggle-2 { top: 56.11%; left: 34.26%; }
+    .toggle-3 { top: 35.84%; left: 55.1%; }
+    .toggle-4 { top: 16.6%; left: 30.36%; }
+    .toggle-5 { top: 77.7%; left: 13.56%; }
+    .toggle-6 { top: 40.22%; left: 8.0%; }
+    .toggle-7 { top: 12.22%; left: 70.37%; }
+    
+    .toggle-switch-inner {
+      border-width: 0.2vw;
+    }
+
+    .toggle-circle {
+      top: 6.25%;
+      left: 2.5%;
+      width: 35%;
+      height: 87.5%;
+    }
+    .toggle-on-text {
+      top: 38.04%;
+      left: 10.57%;
+      width: 17.69%;
+      height: 23.71%;
+    }
+    .toggle-off-text {
+      top: 29.38%;
+      left: 70.57%;
+      width: 19.17%;
+      height: 32.36%;
+    }
+  }
